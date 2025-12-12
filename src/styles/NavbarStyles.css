@@ -1,0 +1,46 @@
+/* ===== MOBILE NAVBAR ===== */
+
+.navbar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+/* Left */
+.navbar__left img {
+    width: 20px;
+    height: 20px;
+}
+
+/* Center */
+.navbar__center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar__logo {
+    font-weight: 800;
+    font-style: Extra Bold;
+    font-size: 20px;
+    line-height: 100%;
+    letter-spacing: 1px;
+    vertical-align: middle;
+
+}
+
+/* Right */
+.navbar__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.navbar__right img {
+    width: 20px;
+    height: 20px;
+}

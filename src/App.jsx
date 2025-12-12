@@ -1,13 +1,17 @@
 import { useState } from 'react';
+import HeroOffer from './components/HeroOffer';
 import ProductListingPage from './pages/ProductListingPage';
+import Navbar from './components/Navbar';
 import './App.css';
 
 function App() {
-    const [count, setCount] = useState(0);
+
 
     return (
         <>
             <main>
+                <HeroOffer />
+                <Navbar />
                 <ProductListingPage />
             </main>
         </>
