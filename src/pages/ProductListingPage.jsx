@@ -10,7 +10,7 @@ function ProductListingPage() {
     const [sortOpen, setSortOpen] = useState(false);    //state for the 
     const [sortBy, setSortBy] = useState('recommended');    //state for selected dropdown option
     const [isFilterOpen, setIsFilterOpen] = useState(false);    //state for filter panel opening and closing
-    const [selectedCategory, setSelectedCategory] = useState('all');    //state for the selected filter options
+    const [selectedCategories, setSelectedCategories] = useState([]);    //state for the selected filter options
     const [products, setProducts] = useState([]);   //state for storing all the products we get from the api
     const [loading, setLoading] = useState(true);   //loading state for the products
     const sortOptions = [       //dropdown options
@@ -27,13 +27,17 @@ function ProductListingPage() {
         women: "women's clothing",
         kids: "__NO_MATCH__"
     };
-    //Filtering logic for the projects
+    //Filtering logic 
     const filteredProducts = products.filter(product => {
-        if (selectedCategory === 'all') return true;
+    // No filters selected to show all
+        if (selectedCategories.length === 0) return true;
 
-        if (selectedCategory === 'kids') return false;
+        // Map selected filters to API categories
+        const mappedCategories = selectedCategories
+            .map(cat => categoryMap[cat])
+            .filter(Boolean);
 
-        return product.category === categoryMap[selectedCategory];
+        return mappedCategories.includes(product.category);
     });
 
     //Calling the products api on every mount
@@ -134,8 +138,8 @@ function ProductListingPage() {
                         </div>
 
                         <FilterContent
-                            selectedCategory={selectedCategory}
-                            onCategoryChange={setSelectedCategory}
+                            selectedCategories={selectedCategories}
+                            onCategoryChange={setSelectedCategories}
                         />
                     </aside>
                 </>

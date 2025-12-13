@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import '../styles/FilterContentStyles.css';
 import ChevronDown from './../assets/icons/chevronDown.svg'
-function FilterContent({ selectedCategory, onCategoryChange }) {
+function FilterContent({ selectedCategories, onCategoryChange }) {
     const [idealForOpen, setIdealForOpen] = useState(true); // default open state for working filters
     return (
         <div className="filter-content">
@@ -14,6 +14,7 @@ function FilterContent({ selectedCategory, onCategoryChange }) {
                 </label>
             </div>
             <br className='filter-content-seperator'/>
+
             {/* IDEAL FOR (FUNCTIONAL) */}
             <div className="filter-section">
                 <div
@@ -30,37 +31,40 @@ function FilterContent({ selectedCategory, onCategoryChange }) {
 
                 {idealForOpen && (
                     <>
-                        <label className="filter-option">
-                        <input
-                            type="radio"
-                            name="idealFor"
-                            checked={selectedCategory === "men"}
-                            onChange={() => onCategoryChange("men")}
-                        />
-                        Men
-                        </label>
+                        {/* Unselect all — show only when something is selected */}
+                        {selectedCategories.length > 0 && (
+                            <span
+                                className="filter-unselect"
+                                onClick={() => onCategoryChange([])}
+                            >
+                                Unselect all
+                            </span>
+                        )}
 
-                        <label className="filter-option">
-                        <input
-                            type="radio"
-                            name="idealFor"
-                            checked={selectedCategory === "women"}
-                            onChange={() => onCategoryChange("women")}
-                        />
-                        Women
-                        </label>
-
-                        <label className="filter-option">
-                        <input
-                            type="radio"
-                            name="idealFor"
-                            checked={selectedCategory === "kids"}
-                            onChange={() => onCategoryChange("kids")}
-                        />
-                        Baby & Kids
-                        </label>
+                        {['men', 'women', 'kids'].map(option => (
+                            <label className="filter-option" key={option}>
+                                <input
+                                    type="checkbox"
+                                    checked={selectedCategories.includes(option)}
+                                    onChange={() => {
+                                        if (selectedCategories.includes(option)) {
+                                            onCategoryChange(
+                                                selectedCategories.filter(c => c !== option)
+                                            );
+                                        } else {
+                                            onCategoryChange([...selectedCategories, option]);
+                                        }
+                                    }}
+                                />
+                                {option === 'men'
+                                    ? 'Men'
+                                    : option === 'women'
+                                    ? 'Women'
+                                    : 'Baby & Kids'}
+                            </label>
+                        ))}
                     </>
-                    )}
+                )}
             </div>
 
             {/* DEAD UI FILTERS */}
