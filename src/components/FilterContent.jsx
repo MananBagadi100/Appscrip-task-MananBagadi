@@ -66,7 +66,7 @@ function FilterContent({ selectedCategories, onCategoryChange }) {
                     </>
                 )}
             </div>
-
+            <hr  className='filter-seperator-line'/>
             {/* DEAD UI FILTERS */}
             {[
                 "OCCASION",
@@ -83,6 +83,7 @@ function FilterContent({ selectedCategories, onCategoryChange }) {
                         <img src={ChevronDown} alt='Chevron Down'/>
                     </div>
                     <p className="filter-subtext">All</p>
+                    <hr  className='filter-seperator-line'/>
                 </div>
             ))}
         </div>

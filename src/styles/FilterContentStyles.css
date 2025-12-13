@@ -94,3 +94,7 @@
     font-size: 14px;
     cursor: pointer;
 }
+.filter-seperator-line {
+    color: #E5E5E5;
+    size: 1px;
+}

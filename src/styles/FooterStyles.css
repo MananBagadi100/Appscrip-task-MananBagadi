@@ -1,0 +1,106 @@
+.footer {
+  background: #000;
+  color: #fff;
+  padding: 24px 16px;
+  font-size: 14px;
+}
+
+.footer-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.footer-section p {
+  font-size: 12px;
+  color: #ccc;
+  margin: 4px 0;
+}
+
+.newsletter {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.newsletter button {
+  background: transparent;
+  border: 1px solid #555;
+  color: #777;
+  padding: 10px 14px;
+}
+
+.divider {
+  height: 1px;
+  background: #333;
+  margin: 24px 0;
+}
+
+/* Accordion */
+.accordion {
+  margin-bottom: 12px;
+}
+
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  cursor: pointer;
+}
+
+.chevron {
+  width: 16px;
+  transition: transform 0.2s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.accordion-content li {
+  font-size: 12px;
+  color: #ccc;
+  margin: 6px 0;
+}
+
+/* Payments */
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payments span {
+  background: #fff;
+  color: #000;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Copyright */
+copyright {
+  text-align: center;
+  font-size: 11px;
+  color: #777;
+  margin-top: 24px;
+}
