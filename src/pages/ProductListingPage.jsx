@@ -6,9 +6,9 @@ import { sortProducts } from './../utils/sortProducts';
 import './../styles/ProductListingStyles.css'
 import FilterContent from '../components/FilterContent';
 import ProductGrid from '../components/ProductGrid';
+import SortDropdown from '../components/SortDropdown';
 
 function ProductListingPage() {
-    const [sortOpen, setSortOpen] = useState(false);    //state for the 
     const [sortBy, setSortBy] = useState('recommended');    //state for selected dropdown option
     const [isFilterOpen, setIsFilterOpen] = useState(false);    //state for filter panel opening and closing
     const [selectedCategories, setSelectedCategories] = useState([]);    //state for the selected filter options
@@ -90,37 +90,10 @@ function ProductListingPage() {
 
                 <div className="product-controls-seperator">|</div>
                                                     
-                <div className="sort-wrapper">
-                    <button
-                        className="product-sort-dropdown"
-                        onClick={() => setSortOpen(prev => !prev)}
-                    >
-                        {sortOptions.find(option => option.value === sortBy)?.label}
-                        <img
-                            src={ChevronDown}
-                            alt="Toggle sort options"
-                            className={`arrow ${sortOpen ? 'open' : ''}`}
-                        />
-                    </button>
-
-                    {sortOpen && (
-                        <div className="sort-dropdown">
-                            {sortOptions.map(option => (
-                                <div
-                                    key={option.value}
-                                    className={`sort-option ${sortBy === option.value ? 'active' : ''}`}
-                                    onClick={() => {
-                                        setSortBy(option.value);
-                                        setSortOpen(false);
-                                    }}
-                                >
-                                    {sortBy === option.value && '✓ '}
-                                    {option.label}
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
+                <SortDropdown
+                    sortBy={sortBy}
+                    onChange={setSortBy}
+                />
             </section>
             {isFilterOpen && (
                 <>
