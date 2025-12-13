@@ -1,19 +1,56 @@
 import { useState } from 'react';
 import ChevronDown from './../assets/icons/chevronDown.svg'
-
+import { useEffect} from 'react';
+import { fetchAllProducts } from '../data/productsApi';
 import './../styles/ProductListingStyles.css'
 import FilterContent from '../components/FilterContent';
+import ProductGrid from '../components/ProductGrid';
+
 function ProductListingPage() {
     const [sortOpen, setSortOpen] = useState(false);    //state for the 
     const [sortBy, setSortBy] = useState('recommended');    //state for selected dropdown option
     const [isFilterOpen, setIsFilterOpen] = useState(false);    //state for filter panel opening and closing
-    const sortOptions = [
+    const [selectedCategory, setSelectedCategory] = useState('all');    //state for the selected filter options
+    const [products, setProducts] = useState([]);   //state for storing all the products we get from the api
+    const [loading, setLoading] = useState(true);   //loading state for the products
+    const sortOptions = [       //dropdown options
         { label: 'Recommended', value: 'recommended' },
         { label: 'Newest First', value: 'newest' },
         { label: 'Popular', value: 'popular' },
         { label: 'Price: High to Low', value: 'price-desc' },
         { label: 'Price: Low to High', value: 'price-asc' }
     ];
+
+    //Filtering logic for applying filters
+    const categoryMap = {
+        men: "men's clothing",
+        women: "women's clothing",
+        kids: "__NO_MATCH__"
+    };
+    //Filtering logic for the projects
+    const filteredProducts = products.filter(product => {
+        if (selectedCategory === 'all') return true;
+
+        if (selectedCategory === 'kids') return false;
+
+        return product.category === categoryMap[selectedCategory];
+    });
+
+    //Calling the products api on every mount
+    useEffect(() => {
+        async function loadProducts() {
+            try {
+                const data = await fetchAllProducts();
+                setProducts(data);
+            } catch (error) {
+                console.error('Failed to fetch products', error);
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        loadProducts();
+    }, []);
     return (
         <main className="plp">
             <div className="product-breadcrums">
@@ -35,12 +72,12 @@ function ProductListingPage() {
 
             {/* Controls */}
             <section className="product-controls">
-            <div
-                className="product-filter-button"
-                onClick={() => setIsFilterOpen(true)}
-            >
-                Filter
-            </div>
+                <div
+                    className="product-filter-button"
+                    onClick={() => setIsFilterOpen(true)}
+                >
+                    Filter
+                </div>
 
                 <div className="product-controls-seperator">|</div>
                                                     
@@ -84,7 +121,7 @@ function ProductListingPage() {
                         onClick={() => setIsFilterOpen(false)}
                     />
 
-                    {/* Drawer */}
+                    {/* Drawer for the filters*/}
                     <aside className="filter-drawer">
                         <div className="filter-drawer-header">
                             <span>Filters</span>
@@ -96,22 +133,22 @@ function ProductListingPage() {
                             </button>
                         </div>
 
-                        <FilterContent />
+                        <FilterContent
+                            selectedCategory={selectedCategory}
+                            onCategoryChange={setSelectedCategory}
+                        />
                     </aside>
                 </>
             )}
 
-            {/* Product Grid */}
-            <section className="plp__grid">
-                {Array.from({ length: 4 }).map((_, index) => (
-                    <article className="product-card" key={index}>
-                        <div className="product-card__image" />
-                        <h3 className="product-card__title">
-                            Product Name
-                        </h3>
-                    </article>
-                ))}
-            </section>
+            {/* Product Grid or Empty State for printing filtered products or all products*/}
+            {loading ? (
+                <div className="no-products">Loading products...</div>
+            ) : filteredProducts.length === 0 ? (
+                <div className="no-products">No products found</div>
+            ) : (
+                <ProductGrid products={filteredProducts} />
+            )}
         </main>
     );
 }

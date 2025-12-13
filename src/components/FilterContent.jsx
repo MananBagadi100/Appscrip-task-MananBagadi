@@ -1,41 +1,72 @@
-import './../styles/FilterContentStyles.css';
+import '../styles/FilterContentStyles.css';
 
-function FilterContent() {
+function FilterContent({ selectedCategory, onCategoryChange }) {
     return (
         <div className="filter-content">
-            {/* Example section */}
+
+            {/* CUSTOMIZABLE (dead UI) */}
             <div className="filter-section">
-                <h4 className="filter-title">IDEAL FOR</h4>
+                <label className="filter-option">
+                    <input type="checkbox" disabled />
+                    CUSTOMIZABLE
+                </label>
+            </div>
+
+            {/* IDEAL FOR (FUNCTIONAL) */}
+            <div className="filter-section">
+                <div className="filter-header">
+                    <h4 className="filter-title">IDEAL FOR</h4>
+                </div>
 
                 <label className="filter-option">
-                    <input type="checkbox" />
+                    <input
+                        type="radio"
+                        name="idealFor"
+                        checked={selectedCategory === "men"}
+                        onChange={() => onCategoryChange("men")}
+                    />
                     Men
                 </label>
 
                 <label className="filter-option">
-                    <input type="checkbox" />
+                    <input
+                        type="radio"
+                        name="idealFor"
+                        checked={selectedCategory === "women"}
+                        onChange={() => onCategoryChange("women")}
+                    />
                     Women
                 </label>
 
                 <label className="filter-option">
-                    <input type="checkbox" />
+                    <input
+                        type="radio"
+                        name="idealFor"
+                        checked={selectedCategory === "kids"}
+                        onChange={() => onCategoryChange("kids")}
+                    />
                     Baby & Kids
                 </label>
             </div>
 
-            <div className="filter-section">
-                <h4 className="filter-title">OCCASION</h4>
-
-                <label className="filter-option">
-                    <input type="checkbox" />
-                    Casual
-                </label>
-
-                <label className="filter-option">
-                    <input type="checkbox" />
-                    Formal
-                </label>
-            </div>
+            {/* DEAD UI FILTERS */}
+            {[
+                "OCCASION",
+                "WORK",
+                "FABRIC",
+                "SEGMENT",
+                "SUITABLE FOR",
+                "RAW MATERIALS",
+                "PATTERN"
+            ].map(title => (
+                <div className="filter-section" key={title}>
+                    <div className="filter-header">
+                        <h4 className="filter-title">{title}</h4>
+                        <span className="chevron">⌄</span>
+                    </div>
+                    <p className="filter-subtext">All</p>
+                </div>
+            ))}
         </div>
     );
 }

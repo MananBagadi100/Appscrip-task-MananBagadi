@@ -67,6 +67,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    height: 40px;
     justify-content: space-between;
     margin-bottom: 16px;
     border-top: 1px solid #E5E5E5;
@@ -150,13 +151,6 @@
     gap: 16px;
 }
 
-/* Product Card */
-.product-card {
-    border: 1px solid #e5e5e5;
-    border-radius: 6px;
-    padding: 12px;
-}
-
 .product-card__image {
     width: 100%;
     height: 140px;
@@ -174,4 +168,12 @@
 .product-card__price {
     font-size: 14px;
     font-weight: 600;
+}
+
+/* If no products after filters then */
+.no-products {
+    padding: 32px 16px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
 }
