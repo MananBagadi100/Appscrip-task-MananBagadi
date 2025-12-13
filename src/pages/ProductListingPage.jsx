@@ -2,6 +2,7 @@ import { useState } from 'react';
 import ChevronDown from './../assets/icons/chevronDown.svg'
 import { useEffect} from 'react';
 import { fetchAllProducts } from '../data/productsApi';
+import { sortProducts } from './../utils/sortProducts';
 import './../styles/ProductListingStyles.css'
 import FilterContent from '../components/FilterContent';
 import ProductGrid from '../components/ProductGrid';
@@ -39,6 +40,10 @@ function ProductListingPage() {
 
         return mappedCategories.includes(product.category);
     });
+
+    //Sorting Function
+    const sortedProducts = sortProducts(filteredProducts, sortBy);
+
 
     //Calling the products api on every mount
     useEffect(() => {
@@ -151,7 +156,7 @@ function ProductListingPage() {
             ) : filteredProducts.length === 0 ? (
                 <div className="no-products">No products found</div>
             ) : (
-                <ProductGrid products={filteredProducts} />
+                <ProductGrid products={sortedProducts} />
             )}
         </main>
     );
