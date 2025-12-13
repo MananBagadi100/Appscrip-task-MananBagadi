@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ChevronDown from './../assets/icons/chevronDown.svg'
 import './../styles/ProductListingStyles.css'
 function ProductListingPage() {
     const [sortOpen, setSortOpen] = useState(false);
@@ -43,7 +44,11 @@ function ProductListingPage() {
                         onClick={() => setSortOpen(prev => !prev)}
                     >
                         {sortOptions.find(option => option.value === sortBy)?.label}
-                        <span className={`arrow ${sortOpen ? 'open' : ''}`}>⌄</span>
+                        <img
+                            src={ChevronDown}
+                            alt="Toggle sort options"
+                            className={`arrow ${sortOpen ? 'open' : ''}`}
+                        />
                     </button>
 
                     {sortOpen && (
