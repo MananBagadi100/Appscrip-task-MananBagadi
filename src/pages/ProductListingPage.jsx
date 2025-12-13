@@ -1,9 +1,12 @@
 import { useState } from 'react';
 import ChevronDown from './../assets/icons/chevronDown.svg'
+
 import './../styles/ProductListingStyles.css'
+import FilterContent from '../components/FilterContent';
 function ProductListingPage() {
-    const [sortOpen, setSortOpen] = useState(false);
-    const [sortBy, setSortBy] = useState('recommended');    //state for selected option
+    const [sortOpen, setSortOpen] = useState(false);    //state for the 
+    const [sortBy, setSortBy] = useState('recommended');    //state for selected dropdown option
+    const [isFilterOpen, setIsFilterOpen] = useState(false);    //state for filter panel opening and closing
     const sortOptions = [
         { label: 'Recommended', value: 'recommended' },
         { label: 'Newest First', value: 'newest' },
@@ -32,9 +35,12 @@ function ProductListingPage() {
 
             {/* Controls */}
             <section className="product-controls">
-                <div className="product-filter-button">
-                    Filter
-                </div>
+            <div
+                className="product-filter-button"
+                onClick={() => setIsFilterOpen(true)}
+            >
+                Filter
+            </div>
 
                 <div className="product-controls-seperator">|</div>
                                                     
@@ -70,6 +76,30 @@ function ProductListingPage() {
                     )}
                 </div>
             </section>
+            {isFilterOpen && (
+                <>
+                    {/* Overlay */}
+                    <div
+                        className="filter-overlay"
+                        onClick={() => setIsFilterOpen(false)}
+                    />
+
+                    {/* Drawer */}
+                    <aside className="filter-drawer">
+                        <div className="filter-drawer-header">
+                            <span>Filters</span>
+                            <button
+                                className="filter-close-btn"
+                                onClick={() => setIsFilterOpen(false)}
+                            >
+                                ✕
+                            </button>
+                        </div>
+
+                        <FilterContent />
+                    </aside>
+                </>
+            )}
 
             {/* Product Grid */}
             <section className="plp__grid">

@@ -1,0 +1,64 @@
+/* Overlay */
+.filter-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+/* Drawer */
+.filter-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 101;
+    padding: 16px;
+    overflow-y: auto;
+    transition: 0.5s ease-out;
+}
+
+/* Drawer header */
+.filter-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.filter-close-btn {
+    all: unset;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Filter content */
+.filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-title {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
