@@ -61,7 +61,7 @@ function ProductListingPage() {
         loadProducts();
     }, []);
     return (
-        <main className="plp">
+        <main className="product-listing-full-container">
             <div className="product-breadcrums">
                 <div className="product-breadcrums-home">Home</div>
                 <div>|</div>
@@ -69,11 +69,11 @@ function ProductListingPage() {
             </div>
             {/* Hero Section */}
             <section className="hero-section">
-                <h1 className="plp__title">
+                <h1 className="product-listing-page-title">
                     Discover Our Products
                 </h1>
 
-                <p className="plp__subtitle">
+                <p className="product-listing-page-subtitle">
                     Lorem ipsum dolor sit amet consectetur. Amet est posuere rhoncus 
                     scelerisque. Dolor integer scelerisque nibh amet mi ut elementum dolor.
                 </p>

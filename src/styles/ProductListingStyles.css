@@ -1,5 +1,5 @@
 /* Mobile first approach */
-.plp {
+.product-listing-full-container {
     display: flex;
     flex-direction: column;
     padding: 0px;
@@ -39,7 +39,7 @@
     box-sizing: border-box;
 }
 
-.plp__title {
+.product-listing-page-title {
     font-style: Regular;
     font-size: 24px;
     line-height: 100%;
@@ -52,7 +52,7 @@
     color: var(--font-color);
 }
 
-.plp__subtitle {
+.product-listing-page-subtitle {
     font-weight: 400;
     font-style: Regular;
     font-size: 16px;
