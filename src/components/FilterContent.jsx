@@ -13,7 +13,7 @@ function FilterContent({ selectedCategories, onCategoryChange }) {
                     CUSTOMIZABLE
                 </label>
             </div>
-            <br className='filter-content-seperator'/>
+            <hr  className='filter-seperator-line'/>
 
             {/* IDEAL FOR (FUNCTIONAL) */}
             <div className="filter-section">
