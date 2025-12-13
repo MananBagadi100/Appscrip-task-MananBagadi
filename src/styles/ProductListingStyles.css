@@ -81,6 +81,7 @@
     border-radius: 4px;
     background: #fff;
     font-size: 14px;
+    font-weight: 700;
     justify-content: center;
 }
 .product-controls-seperator {
@@ -139,7 +140,14 @@
 .sort-option:hover {
     background-color: #f5f5f5;
 }
+.sort-dropdown-selected {
+    font-size: 14px;
+    font-weight: 400;
+}
 
+.sort-dropdown-selected.active {
+    font-weight: 700;
+}
 .sort-option.active {
     font-weight: 600;
 }

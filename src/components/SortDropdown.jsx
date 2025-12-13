@@ -22,7 +22,7 @@ function SortDropdown({ sortBy, onChange }) {
                 className="sort-dropdown-button"
                 onClick={() => setOpen(prev => !prev)}
             >
-                {activeLabel}
+                <span className='sort-dropdown-selected active'>{activeLabel}</span>
                 <img
                     src={ChevronDown}
                     alt="Toggle sort"
