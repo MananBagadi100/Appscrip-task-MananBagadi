@@ -1,0 +1,21 @@
+.Phone-system-navigation-bar-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+}
+.Phone-system-navigation-bar-section div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: #EB4C6B;
+    background-color: black;
+}
+ 
+@media (min-width:734px) {
+    .Phone-system-navigation-bar-section {
+        display: none;
+    }
+}
