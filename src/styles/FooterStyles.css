@@ -327,7 +327,9 @@
         width: 160px;
         background: transparent;
         border: 1.15px solid #fff;
-        color: #fff;
+        color: #d2d2d2;
+        background: transparent;
+        opacity: 0.3;
         font-weight: 700;
         border-radius: 5px;
         text-transform: uppercase;
@@ -340,17 +342,16 @@
     }
 
     .footer-contact h3 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         margin-bottom: 16px;
     }
 
     .footer-contact p {
-        font-size: 14px;
+        font-size: 16px;
         margin-bottom: 8px;
         color: #d2d2d2;
     }
-
     .currency-title {
         margin-top: 24px;
     }
@@ -368,7 +369,7 @@
     }
 
     .footer-contact small {
-        font-size: 12px;
+        font-size: 14px;
         color: #a0a0a0;
         line-height: 1.4;
     }
@@ -385,14 +386,15 @@
     ------------------------- */
 
     .footer-desktop-links {
-        display: flex;
-        justify-content: space-between;
-        gap: 80px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,max-content));
         margin-bottom: 48px;
+        column-gap: 16px;
+        justify-content: space-between;
     }
 
     .footer-desktop-links h3 {
-        font-size: 16px;
+        font-size: 20px;
         font-weight: 700;
         margin-bottom: 16px;
     }
@@ -404,9 +406,9 @@
     }
 
     .footer-desktop-links li {
-        font-size: 14px;
+        font-size: 18px;
         color: #d2d2d2;
-        margin-bottom: 12px;
+        margin-bottom: 16px;
         cursor: pointer;
     }
 
