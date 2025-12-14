@@ -13,9 +13,32 @@
     color: #EB4C6B;
     background-color: black;
 }
- 
-@media (min-width:734px) {
+/* Hide desktop hero by default */
+.Desktop-system-navigation-bar {
+  display: none;
+}
+
+/* Desktop breakpoint */
+@media (min-width: 768px) {
+    /* Hide mobile hero */
     .Phone-system-navigation-bar-section {
         display: none;
+    }
+
+    /* Show desktop hero */
+    .Desktop-system-navigation-bar {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: black;
+        padding: 8px 48px;
+    }
+    .desktop-hero-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: #EB4C6B;
+        font-size: 12px;
+        font-weight: 400;
     }
 }

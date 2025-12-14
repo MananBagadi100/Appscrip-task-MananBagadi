@@ -6,6 +6,13 @@
     z-index: 100;
 }
 
+/* Filter content */
+.filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
 /* Drawer */
 .filter-drawer {
     position: fixed;
@@ -35,13 +42,6 @@
     all: unset;
     cursor: pointer;
     font-size: 18px;
-}
-
-/* Filter content */
-.filter-content {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
 }
 
 .filter-section {
@@ -97,4 +97,10 @@
 .filter-seperator-line {
     color: #E5E5E5;
     size: 1px;
+}
+
+@media (min-width: 768px) {
+    .filter-title {
+        font-size: 18px;
+    }
 }
