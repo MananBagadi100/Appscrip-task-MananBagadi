@@ -1,6 +1,6 @@
 # AppScrip Assignment – Product Listing Page (React + Vite)
 
-**Live Demo (Vercel):** _<PASTE_YOUR_VERCEL_LINK_HERE>_  
+**Live Demo (Vercel):** _[https://appscrip-task-manan-bagadi-g4i4.vercel.app/](https://appscrip-task-manan-bagadi-g4i4.vercel.app/)_  
 **Repository:** _[https://github.com/MananBagadi100/Appscrip-task-MananBagadi](https://github.com/MananBagadi100/Appscrip-task-MananBagadi)_
 
 This project is an AppScrip assignment implementing a responsive Product Listing Page (PLP) UI with:
