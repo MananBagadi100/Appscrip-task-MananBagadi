@@ -1,7 +1,7 @@
 # AppScrip Assignment – Product Listing Page (React + Vite)
 
 **Live Demo (Vercel):** _<PASTE_YOUR_VERCEL_LINK_HERE>_  
-**Repository:** _<PASTE_YOUR_GITHUB_REPO_LINK_HERE>_
+**Repository:** _[https://github.com/MananBagadi100/Appscrip-task-MananBagadi](https://github.com/MananBagadi100/Appscrip-task-MananBagadi)_
 
 This project is an AppScrip assignment implementing a responsive Product Listing Page (PLP) UI with:
 - Desktop layout with persistent sidebar filters + product grid
@@ -72,7 +72,7 @@ src/
 
 ### 1) Clone the repository
 ```bash
-git clone <PASTE_YOUR_REPO_CLONE_URL_HERE>
+git clone https://github.com/MananBagadi100/Appscrip-task-MananBagadi.git
 cd <YOUR_PROJECT_FOLDER>
 ```
 
@@ -113,8 +113,6 @@ npm run preview
   - `src/data/productsApi.js`
 - PLP composition is in:
   - `src/pages/ProductListingPage.jsx`
-- The **desktop footer styles** are defined under the desktop media query in:
-  - `src/styles/FooterStyles.css`
 
 ---
 
@@ -125,8 +123,6 @@ npm run preview
 3. Framework preset: **Vite**
 4. Build command: `npm run build`
 5. Output directory: `dist`
-
-After deployment, paste your Vercel URL at the top of this README under **Live Demo**.
 
 ---
 
