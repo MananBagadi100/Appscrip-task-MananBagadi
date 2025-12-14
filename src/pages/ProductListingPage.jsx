@@ -81,6 +81,7 @@ function ProductListingPage() {
 
             {/* Controls */}
             <section className="product-controls">
+                <div className="product-filter-dummy-numbers">3425 ITEMS</div>
                 <div
                     className="product-filter-button"
                     onClick={() => setIsFilterOpen(true)}
