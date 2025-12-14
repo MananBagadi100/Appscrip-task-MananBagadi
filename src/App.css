@@ -4,10 +4,11 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* The font is paid so a fallback for my system*/
+/* The font is paid so a fallback for my system*/ 
 body {
     font-family: "Simplon Norm", Arial, Helvetica, sans-serif;
 }
+
 #root {
     --font-color:#252020;   /* Colour of the font used*/
 }

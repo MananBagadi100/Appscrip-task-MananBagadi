@@ -1,0 +1,238 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #fff;
+    padding: 24px 16px;
+    font-size: 14px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 16px;
+    box-sizing: border-box;
+}
+.footer-section h3 {
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    text-transform: uppercase;
+}
+
+.footer-section p {
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    opacity: 1;
+    height: 48px;
+    padding-top: 14px 24px 14px;
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
+
+.newsletter input {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    box-sizing: border-box;
+}
+
+.newsletter-subscribe-btn {
+    display: flex;
+    border: 1.15px solid #ffffff;
+    color: #d2d2d2;
+    background: transparent;
+    border-width: 1px;
+    opacity: 0.3;
+    width: 30%;
+    height: 100%;
+    border-radius: 5px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.footer-line-seperator {
+  size: 1px;
+  color: #E5E5E5;
+}
+
+/* Footer Call us Section*/
+.footer-section-call-us {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+.footer-section-contact-details {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 8px;
+    box-sizing: border-box;
+}
+.star-bullet-point {
+  display: flex;
+  width: 6px;
+  height: 6px;
+}
+.footer-section-contact-details p {
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+
+}
+
+/* Currency Section */
+.footer-section-currency {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+.footer-section-currency-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 4px;
+  align-items: center;
+  box-sizing: border-box;
+}
+.footer-section-currency-details p {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+.footer-line-seperator-enhanced {
+  size: 4px;
+  color: #ffffff;
+}
+
+/* Accordion */
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.accordion-header {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding: 16px 0 28px;
+
+}
+
+.chevron {
+  width: 16px;
+  transition: transform 0.2s ease;
+  color: white;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+  color: white;
+}
+
+.accordion-content {
+  list-style: none;
+  padding: 0 12px;
+  margin-bottom: 12px;
+}
+
+.accordion-content li {
+  font-size: 14px;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.social-icons {
+  display: flex;
+  gap: 16px;
+  padding: 0 12px 8px;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Payments  Section*/
+.footer-section-payments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+.footer-section-payments h3 {
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  padding: 4px 0 16px;
+}
+.payments {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.payments span {
+  background: #fff;
+  color: #000;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+/* Copyright */
+.copyright {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+}

@@ -1,16 +1,15 @@
+import PhoneNavigation from './../assets/icons/TopbarMobile.svg'
+import './../styles/HeroOfferStyles.css'
 function HeroOffer() {
     return (
-        <div style={{
-            display:"flex",
-            alignItems:"center",
-            justifyContent:'center',
-            fontSize:12,
-            fontWeight:400,
-            color:'#EB4C6B',
-            background:'black'
-        }}>
-            Lorem ipsum dolor
-        </div>
+        <section
+            className='Phone-system-navigation-bar-section'
+        >
+            <img src={PhoneNavigation} alt="Phone Navigation" />
+            <div>
+                Lorem ipsum dolor
+            </div>
+        </section>
     )
 }
 export default HeroOffer

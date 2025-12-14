@@ -1,0 +1,100 @@
+/* Overlay */
+.filter-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+/* Drawer */
+.filter-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 101;
+    padding: 16px;
+    overflow-y: auto;
+    transition: 0.5s ease-out;
+}
+
+/* Drawer header */
+.filter-drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.filter-close-btn {
+    all: unset;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Filter content */
+.filter-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.filter-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;          
+    justify-content: space-between; 
+    gap: 8px;                    
+    cursor: pointer; 
+    gap: 2px;
+}
+.chevron {
+    transition: transform 0.2s ease;
+}
+
+.chevron.open {
+    transform: rotate(180deg);
+}
+/* To unselect all filters in that group*/
+.filter-unselect {
+    font-size: 14px;
+    color: #BFC8CD;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 6px;
+    display: inline-block;
+}
+.filter-title {
+    display: flex;
+    flex: 1 1 auto;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.filter-seperator-line {
+    color: #E5E5E5;
+    size: 1px;
+}
