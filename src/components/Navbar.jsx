@@ -27,7 +27,7 @@ function Navbar() {
 
                     {/* Icons for Desktop-only */}
                     <img src={profileIcon} alt="Profile" className="navbar__desktop-only" />
-                    <div className="navbar__desktop-only navbar__language">
+                    <div className="navbar__desktop-only navbar__language" style={{fontSize:16,fontWeight:700}}>
                         ENG <img src={chevronDown} alt="Language" />
                     </div>
                 </div>

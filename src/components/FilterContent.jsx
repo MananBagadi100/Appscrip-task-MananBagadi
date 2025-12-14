@@ -15,7 +15,7 @@ function FilterContent({ selectedCategories, onCategoryChange }) {
             </div>
             <hr  className='filter-seperator-line'/>
 
-            {/* IDEAL FOR (FUNCTIONAL) */}
+            {/* Functional Filters */}
             <div className="filter-section">
                 <div
                     className="filter-header"

@@ -74,6 +74,9 @@
     border-top: 1px solid #E5E5E5;
     border-bottom: 1px solid #E5E5E5;
 }
+.desktop-filter-toggle {
+    display: none;
+}
 .product-filter-dummy-numbers {
     display: none;
 }
@@ -189,6 +192,13 @@
     color: #777;
 }
 
+.desktop-plp-layout {
+    display: none;
+}
+.mobile-plp-layout {
+    display: flex;
+}
+
 @media (min-width:768px) {
     .product-breadcrums {
         display: none;
@@ -221,9 +231,12 @@
         margin: 0 auto;
     }
     .product-controls {
+        flex-shrink: 1;
         max-width: 1250px;
+        min-width: none;
         margin: 0 auto;
         padding: 24px 0;
+        gap: 48px;
     }
     .product-filter-dummy-numbers {
         display: flex;
@@ -233,7 +246,64 @@
         letter-spacing: 0px;
         text-transform: uppercase;
     }
+    .desktop-filter-toggle {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+    .product-filter-button {
+        display: none;
+    }
     .product-controls-seperator {
         display: none;
+    }
+    /* Mobile product listing layout */
+    .mobile-plp-layout {
+        display: none;
+    }
+    /* Desktop product listing layout */
+    .desktop-plp-layout {
+        display: flex;
+        gap: 32px;
+        width: 1250px;
+        margin: 0 auto;
+        padding-top: 24px;
+    }
+
+    .desktop-filter-sidebar {
+        width: 260px;
+        flex-shrink: 0;
+    }
+
+    .desktop-product-grid {
+        display: flex;
+        flex: 1 1 auto;
+    }
+
+    .desktop-filter-open-toggle-btn {
+        display: inline-flex;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #888792;
+        font-family: "adobe-caslon-pro", serif;;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 16px;
+        height: 40px;
+        line-height: 1;
+        letter-spacing: 0px;
+        text-decoration: underline;
+        text-decoration-style: solid;
+        text-decoration-thickness: 0%;
+        align-items: center;
+        justify-content: center;
+        padding-top: 6px
+;
+    }
+    .no-products {
+        display: flex;
+        flex: 1 1 auto;
+        justify-content: center;
+        align-items: center;
     }
 }

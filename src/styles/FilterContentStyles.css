@@ -98,3 +98,9 @@
     color: #E5E5E5;
     size: 1px;
 }
+
+@media (min-width: 768px) {
+    .filter-title {
+        font-size: 18px;
+    }
+}

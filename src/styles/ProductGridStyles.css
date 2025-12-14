@@ -107,4 +107,14 @@
         grid-template-columns: repeat(4, 1fr);
         padding: 32px;
     }
+    .product-card-image {
+        height: 220px;
+    }
+    .product-card-name {
+        font-size: 18px;
+        font-weight: 700;
+    }
+    .product-card-signin-options {
+        font-size: 14px;
+    }
 }
