@@ -82,33 +82,35 @@ function ProductListingPage() {
             </section>
 
             {/* Controls Section */}
-            <section className="product-controls">
-                { /* Dummy Product Text for Desktop only  */}
-                <div className="product-filter-dummy-numbers">3425 ITEMS</div>
-                { /* Filter Toggle for Desktop only  */}
-                <div className="desktop-filter-toggle">
-                    <img src={ChevronLeft} alt="Chevron Left" className="desktop-filter-chevron-toggle-btn" />
-                    <span
-                        className="desktop-filter-open-toggle-btn"
-                        onClick={() => setIsDesktopFilterVisible(prev => !prev)}
+            <section className="product-controls-wrapper">
+                <div className="product-controls">
+                    { /* Dummy Product Text for Desktop only  */}
+                    <div className="product-filter-dummy-numbers">3425 ITEMS</div>
+                    { /* Filter Toggle for Desktop only  */}
+                    <div className="desktop-filter-toggle">
+                        <img src={ChevronLeft} alt="Chevron Left" className="desktop-filter-chevron-toggle-btn" />
+                        <span
+                            className="desktop-filter-open-toggle-btn"
+                            onClick={() => setIsDesktopFilterVisible(prev => !prev)}
+                        >
+                            {isDesktopFilterVisible ? 'HIDE FILTER' : 'SHOW FILTER'}
+                        </span>
+                    </div>
+                    { /* Button shown on Mobile only */}
+                    <div
+                        className="product-filter-button"
+                        onClick={() => setIsFilterOpen(true)}
                     >
-                        {isDesktopFilterVisible ? 'HIDE FILTER' : 'SHOW FILTER'}
-                    </span>
-                </div>
-                { /* Button shown on Mobile only */}
-                <div
-                    className="product-filter-button"
-                    onClick={() => setIsFilterOpen(true)}
-                >
-                    Filter
-                </div>
+                        Filter
+                    </div>
 
-                <div className="product-controls-seperator">|</div>
-                                                    
-                <SortDropdown
-                    sortBy={sortBy}
-                    onChange={setSortBy}
-                />
+                    <div className="product-controls-seperator">|</div>
+                                                        
+                    <SortDropdown
+                        sortBy={sortBy}
+                        onChange={setSortBy}
+                    />
+                </div>
             </section>
             {isFilterOpen && (
                 <>

@@ -230,10 +230,18 @@
         max-width: 720px;
         margin: 0 auto;
     }
+    .product-controls-wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+
+    }
     .product-controls {
-        flex-shrink: 1;
+        width: 100%;
         max-width: 1250px;
-        min-width: none;
         margin: 0 auto;
         padding: 24px 0;
         gap: 48px;
@@ -245,6 +253,7 @@
         line-height: 40px;
         letter-spacing: 0px;
         text-transform: uppercase;
+        margin-left: 8px;
     }
     .desktop-filter-toggle {
         display: flex;
