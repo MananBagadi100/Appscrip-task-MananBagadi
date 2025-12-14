@@ -95,17 +95,19 @@
 
 /* Tablet */
 @media (min-width: 768px) {
-    .product-grid {
-        grid-template-columns: repeat(3, 1fr);
-        padding: 24px;
+    .product-grid-wrapper {
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
     }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
     .product-grid {
-        grid-template-columns: repeat(4, 1fr);
-        padding: 32px;
+        grid-template-columns: repeat(auto-fit, minmax(220px,max-content));
+        padding: 24px;
+        box-sizing: border-box;
     }
     .product-card-image {
         height: 220px;
@@ -117,4 +119,9 @@
     .product-card-signin-options {
         font-size: 14px;
     }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+
 }

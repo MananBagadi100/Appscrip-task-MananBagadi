@@ -274,14 +274,18 @@
     .desktop-plp-layout {
         display: flex;
         gap: 32px;
-        width: 1250px;
+        width: 100%;
+        max-width: 1250px;
         margin: 0 auto;
         padding-top: 24px;
+        box-sizing: border-box;
     }
 
     .desktop-filter-sidebar {
-        width: 260px;
-        flex-shrink: 0;
+        width: 20%;
+        min-width: 180px;
+        padding: 0 0 0 24px;
+        box-sizing: border-box;
     }
 
     .desktop-product-grid {
