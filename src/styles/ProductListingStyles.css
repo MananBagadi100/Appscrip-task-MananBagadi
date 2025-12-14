@@ -186,6 +186,10 @@
 
 /* If no products after filters then */
 .no-products {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    justify-content: center;
     padding: 32px 16px;
     text-align: center;
     font-size: 14px;

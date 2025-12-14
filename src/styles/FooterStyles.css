@@ -236,3 +236,224 @@
   line-height: 1.4;
   text-align: center;
 }
+
+.footer-desktop {
+  display: none;
+  background: #000;
+  color: #fff;
+  padding: 64px 96px;
+  box-sizing: border-box;
+}
+
+
+
+
+/* =========================
+   DESKTOP FOOTER
+========================= */
+
+/* =========================
+   DESKTOP FOOTER
+========================= */
+
+@media (min-width: 768px) {
+
+  h3 {
+    font-size: 20px;
+  }
+    /* Hide mobile footer */
+    .footer {
+        display: none;
+    }
+
+    /* Show desktop footer */
+    .footer-desktop {
+        display: block;
+        background: #000;
+        color: #fff;
+        padding: 64px 92px;
+        box-sizing: border-box;
+    }
+
+    /* -------------------------
+       TOP SECTION
+    ------------------------- */
+
+    .footer-desktop-top {
+        display: flex;
+        justify-content: space-between;
+        gap: auto;
+        margin-bottom: 48px;
+    }
+
+    /* Newsletter */
+    .footer-newsletter {
+        flex: 1 1 auto;
+        min-width: 350px;
+        max-width: 550px;
+        margin-right: 32px;
+    }
+
+    .footer-newsletter h3 {
+        font-size: 20px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+    }
+
+    .footer-newsletter p {
+        font-size: 16px;
+        margin-bottom: 48px;
+        color: #d2d2d2;
+    }
+
+    .newsletter-desktop {
+        display: flex;
+        padding: 0 12px;
+        gap: 16px;
+        box-sizing: border-box;
+    }
+
+    .newsletter-desktop input {
+        flex: 1 1 auto;
+        height: 48px;
+        max-width: 320px;
+        padding: 0 16px;
+        border: none;
+        font-size: 14px;
+    }
+
+    .newsletter-desktop button {
+        width: 160px;
+        background: transparent;
+        border: 1.15px solid #fff;
+        color: #d2d2d2;
+        background: transparent;
+        opacity: 0.3;
+        font-weight: 700;
+        border-radius: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    /* Contact & Currency */
+    .footer-contact {
+        max-width: 360px;
+    }
+
+    .footer-contact h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .footer-contact p {
+        font-size: 16px;
+        margin-bottom: 8px;
+        color: #d2d2d2;
+    }
+    .currency-title {
+        margin-top: 24px;
+    }
+
+    .currency-row {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 16px;
+    }
+
+    .currency-row p {
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .footer-contact small {
+        font-size: 14px;
+        color: #a0a0a0;
+        line-height: 1.4;
+    }
+
+    /* Divider */
+    .footer-desktop hr {
+        border: none;
+        border-top: 1px solid #333;
+        margin: 48px 0;
+    }
+
+    /* -------------------------
+       LINKS SECTION
+    ------------------------- */
+
+    .footer-desktop-links {
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(200px,max-content));
+        margin-bottom: 48px;
+        column-gap: 16px;
+        justify-content: space-between;
+    }
+
+    .footer-desktop-links h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    .footer-desktop-links ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-desktop-links li {
+        font-size: 18px;
+        color: #d2d2d2;
+        margin-bottom: 16px;
+        cursor: pointer;
+    }
+
+    .footer-desktop-links li:hover {
+        color: #fff;
+    }
+
+    /* Social */
+    .footer-desktop-links .social-icons {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .footer-desktop-links .social-icons img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+    }
+
+    /* Payments */
+    .payments-title {
+        margin-bottom: 16px;
+    }
+
+    .payments {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .payments img {
+        background: #fff;
+        padding: 6px 8px;
+        border-radius: 4px;
+    }
+
+    /* -------------------------
+       COPYRIGHT
+    ------------------------- */
+
+    .footer-copyright {
+        text-align: center;
+        font-size: 14px;
+        color: #a0a0a0;
+        margin-top: 32px;
+    }
+}
