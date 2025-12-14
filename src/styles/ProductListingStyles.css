@@ -185,3 +185,36 @@
     font-size: 14px;
     color: #777;
 }
+
+@media (min-width:768px) {
+    .product-breadcrums {
+        display: none;
+    }
+    .hero-section {
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 72px 0;
+        box-sizing: border-box;
+    }
+    .product-listing-page-title {
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 60px;
+        line-height: 100%;
+        letter-spacing: 1px;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+    }
+    .product-listing-page-subtitle {
+        font-weight: 400;
+        font-style: Regular;
+        font-size: 22px;
+        line-height: 40px;
+        letter-spacing: 0px;
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto;
+    }
+}
